@@ -2,9 +2,9 @@ var _ = require('lodash');
 
 function glob2re(pattern) {
 	var re = '';
-	var len = pattern.length;
-	for (var i = 0; i < len; ++i) {
-		var ch = pattern[i];
+	var i = 0, len = pattern.length;
+	while (i < len) {
+		var ch = pattern[i++];
 		switch (ch) {
 			case '*':
 				re += '.*';
@@ -13,14 +13,14 @@ function glob2re(pattern) {
 				re += '.';
 				break;
 			case '[':
-				var j = i + 1;
+				var j = i;
 				if (j < len && pattern[j] === '!') ++j;
 				if (j < len && pattern[j] === ']') ++j;
 				while (j < len && pattern[j] !== ']') ++j;
 				if (j >= len) {
 					re += '\\[';
 				} else {
-					var contents = pattern.slice(i + 1, j);
+					var contents = pattern.slice(i, j);
 					contents = contents.replace('\\', '\\\\');
 					i = j + 1;
 					if (contents[0] === '!')
