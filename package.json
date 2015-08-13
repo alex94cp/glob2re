@@ -1,0 +1,27 @@
+{
+  "name": "glob2re",
+  "version": "1.0.0",
+  "description": "Glob to RegExp translation library for Javascript",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex94puchades/glob2re.git"
+  },
+  "keywords": [
+    "glob",
+    "regexp",
+    "fnmatch",
+    "match",
+    "translate",
+    "pattern"
+  ],
+  "author": "Alejandro Caravaca Puchades <alex94puchades@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/alex94puchades/glob2re/issues"
+  },
+  "homepage": "https://github.com/alex94puchades/glob2re#readme",
+  "dependencies": {
+    "lodash": "^3.10.1"
+  }
+}
