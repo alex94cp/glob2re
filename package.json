@@ -1,6 +1,6 @@
 {
   "name": "glob2re",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Glob to RegExp translation library for Javascript",
   "main": "index.js",
   "repository": {
